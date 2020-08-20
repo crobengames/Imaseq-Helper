@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+
+    <name>Imaseq Helper</name>
+    <id>org.inkscape.output.imaseq_helper</id>
+    <param name="tab" type="notebook">
+        <page name="export_tab" gui-text="Export Settings">
+            <param name="export_option" type="enum" gui-text="Export Mode">
+                <item value="Visible">Visible</item>
+                <item value="All">All Layers</item>
+                <item value="None">None</item>
+            </param>
+            <param name="bounds_layer" type="string" gui-text="Bounds Layer:">Bounds</param>
+            <param name="file_name" type="string" gui-text="File Name:"></param>
+            <param name="directory" type="path" mode="folder" gui-text="Directory"></param>
+            <param name="overwrite" type="bool" gui-text="Overwrite (Note: Will always overwrite if mode is All Layers)">true</param>
+            <param name="dpi" type="float" precision="2" min="1.00" max="100000.00" gui-text="DPI">96.00</param>       
+       </page>
+
+        <page name="layer_tab" gui-text="Layer Settings">
+            <param name="duplicate_layer" type="bool" gui-text="Create A Duplicate Layer">true</param>
+            <param name="layer_opacity" type="float" precision="1" min="0.0" max="100.0" appearance="full" gui-text="Layer Opacity">50.0</param>
+        </page>
+
+        <page name="usage_faq" gui-text="Usage FAQ">
+            <label appearance="header">What is a "Bounds Layer"?</label>
+            <label>It is a layer that contains a "rectangle object" (not a circle or path) that will serve as your export area.</label>
+            <label appearance="header">How to use the layer name as a file name?</label>
+            <label>Just leave the "File Name" field empty.</label>
+            <label appearance="header">How to determine the DPI?</label>
+            <label>Select the rectangle object, open export window (Shift+Ctrl+E), go to the "Selection" tab, on the "Image size" section you can see the DPI.</label>
+            <label indent="10">For more info visit:</label>
+            <label indent="4" appearance="url">https://www.croben.com/2020/08/imaseq-helper.html</label>
+        </page>
+    </param>
+
+    <effect needs-live-preview="false">
+        <object-type>all</object-type>
+        <effects-menu>
+            <submenu name="Export"/>
+        </effects-menu>
+    </effect>
+
+    <script>
+        <command location="inx" interpreter="python">imaseq_helper.py</command>
+    </script>
+
+</inkscape-extension>
