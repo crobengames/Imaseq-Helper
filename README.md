@@ -78,6 +78,11 @@ If you install it correctly, you should see “Imaseq Helper” on “Export” 
     • This mode produces temporary files equal to or more than the number of layers to be exported. Therefore, you are advised to clean these temporary at your convenience.
     • Setting a file name will not guarantee correct naming order, because layers may get exported randomly. So it is best to leave the file name blank and use the layer name instead.
 
+3. Fixed Background For All Exports
+    • If you have a background on a separate layer and want it to be visible on every export. You can make the background layer a child of the bounds layer. Just make sure you set the alpha or opacity of the rectangle object to zero.
 
+4. Child Layers Are Not Exported Individually
+    • If you have a group of layers, only the parent layer is exported. But if the child layers are visible, then they too will be captured on the exported image.
+    
 
 [![DOWNLOAD](images/imaseq-helper-download.png)](https://croben.itch.io/imaseq-helper/purchase?popup=1)
