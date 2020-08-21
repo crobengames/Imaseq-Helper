@@ -1,3 +1,6 @@
+![Cover](images/imaseq-helper-cover.png)
+
+
 # WHAT IS IMASEQ HELPER?
 
 Imaseq Helper is a free and open-source extension for Inkscape 1.0, released under the GPL version 3 license. This extension allows you to export PNG images by visibility or layers. You can also choose to make the extension duplicate a layer base on a setting, which is a common task when making a frame by frame animation.
@@ -9,6 +12,14 @@ Imaseq Helper is a free and open-source extension for Inkscape 1.0, released und
     • Export images using the layer name as a file name.
     • Batch export of rectangles or layers with incremented naming option.
     • Duplicate layers with incremented name and opacity of your choice.
+
+
+# VIDEO
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=kYXFYsGfj7U" target="_blank"><img src="http://img.youtube.com/vi/kYXFYsGfj7U/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="853" height="480" border="10" /></a>
+
+
+[![DOWNLOAD](images/imaseq-helper-download.png)](https://croben.itch.io/imaseq-helper/purchase?popup=1)
 
 
 # HOW IT WORKS?
@@ -66,3 +77,7 @@ If you install it correctly, you should see “Imaseq Helper” on “Export” 
 2. Setting Export Mode To “All Layers”
     • This mode produces temporary files equal to or more than the number of layers to be exported. Therefore, you are advised to clean these temporary at your convenience.
     • Setting a file name will not guarantee correct naming order, because layers may get exported randomly. So it is best to leave the file name blank and use the layer name instead.
+
+
+
+[![DOWNLOAD](images/imaseq-helper-download.png)](https://croben.itch.io/imaseq-helper/purchase?popup=1)
