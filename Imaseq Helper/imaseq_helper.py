@@ -173,10 +173,9 @@ class ImaseqHelper(inkex.EffectExtension):
 
         cur_layer = self.svg.get_current_layer()
         d_layer = Layer.duplicate(cur_layer)
-        d_layer.label = self.update_numeric_suffix(cur_layer.label)   
-        d_layer_opacity = max(min(self.options.layer_opacity / 100.0, 1.0), 0.0)
+        d_layer.label = self.update_numeric_suffix(cur_layer.label)
         d_layer.style['opacity'] = 1.0
-        cur_layer.style['opacity'] = d_layer_opacity
+        cur_layer.style['opacity'] = max(min(self.options.layer_opacity / 100.0, 1.0), 0.0)
 
 
     @staticmethod
