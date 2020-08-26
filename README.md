@@ -61,6 +61,7 @@ If you install it correctly, you should see “Imaseq Helper” on “Export” 
 
 6. Set image “DPI”
     - To determine the desired DPI select the “rectangle object,” open export window (Shift+Ctrl+E), go to the "Selection" tab, in the "Image size" section, you can see the DPI.
+    - If you want to export using the dimensions of the rectangle object, you can set the DPI to a number lower than one like zero.
 
 7. To “Duplicate Layer” or not
     - On the “Layer Settings” tab, you can set to duplicate the selected layer if the “Export Mode” is “Visible” or “None”
@@ -83,6 +84,9 @@ If you install it correctly, you should see “Imaseq Helper” on “Export” 
 
 4. Child Layers Are Not Exported Individually
     - If you have a group of layers, only the parent layer is exported. But if the child layers are visible, then they too will be captured on the exported image.
-    
+
+5. Export Using The Dimensions Of The Rectangle Object
+    - If you set the DPI to zero, the dimension of the rectangle object will be used as the dimension of the image. But keep in mind that if the dimension in “pixels” is not a “whole number,” it will be rounded to the nearest one. Example 24.1 pixels will be 24 pixels, 99.5 pixels will be 100 pixels, etc. 
+
 
 [![DOWNLOAD](images/imaseq-helper-download.png)](https://croben.itch.io/imaseq-helper/purchase?popup=1)

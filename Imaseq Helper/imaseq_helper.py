@@ -24,6 +24,7 @@ class ImaseqHelper(inkex.EffectExtension):
 
     #One inches is 25.4 millimeter
     INCH_IN_MM = 25.4
+    PIXEL_IN_MM = 3.779528
 
 
     def add_arguments(self, pars):
@@ -33,7 +34,7 @@ class ImaseqHelper(inkex.EffectExtension):
         pars.add_argument("--bounds_layer", default="Bounds", help="Layer with rectangle object in it")
         pars.add_argument("--file_name", default="", help="Image file name")
         pars.add_argument("--overwrite", type=inkex.Boolean, help="To overwrite existing files or not")
-        pars.add_argument("--dpi", type=float, default=96.00, help="Export size in Dots per inch")
+        pars.add_argument("--dpi", type=float, default=0.00, help="Export size in Dots per inch")
         pars.add_argument("--duplicate_layer", type=inkex.Boolean, help="Create a duplicate layer?")
         pars.add_argument("--layer_opacity", type=float, default=50.0, help="Opacity of the duplicated layer")
 
@@ -162,7 +163,11 @@ class ImaseqHelper(inkex.EffectExtension):
 
 
     def get_pixel_length(self, mm_length):
-        """Convert millimeter to inches then inches to pixels"""
+        """Convert millimeter to pixels"""
+
+        if self.options.dpi < 1.0:
+            return round(mm_length * self.PIXEL_IN_MM)
+
         return round((mm_length / self.INCH_IN_MM) * self.options.dpi)
 
 

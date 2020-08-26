@@ -14,7 +14,7 @@
             <param name="file_name" type="string" gui-text="File Name:"></param>
             <param name="directory" type="path" mode="folder" gui-text="Directory"></param>
             <param name="overwrite" type="bool" gui-text="Overwrite (Note: Will always overwrite if mode is All Layers)">true</param>
-            <param name="dpi" type="float" precision="2" min="1.00" max="100000.00" gui-text="DPI">96.00</param>       
+            <param name="dpi" type="float" precision="2" min="0.00" max="100000.00" gui-text="DPI">96.00</param>       
        </page>
 
         <page name="layer_tab" gui-text="Layer Settings">
